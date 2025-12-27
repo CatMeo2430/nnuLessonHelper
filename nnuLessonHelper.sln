@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rush", "Rush\Rush.csproj", "{418D1D7D-8F89-4C06-A207-50DD38B91F6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watch", "Watch\Watch.csproj", "{509385E0-6B66-49C2-B709-F51B4213C588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{1DCB55CA-1352-456D-B96F-DF1E120F630A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{418D1D7D-8F89-4C06-A207-50DD38B91F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418D1D7D-8F89-4C06-A207-50DD38B91F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418D1D7D-8F89-4C06-A207-50DD38B91F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418D1D7D-8F89-4C06-A207-50DD38B91F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509385E0-6B66-49C2-B709-F51B4213C588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509385E0-6B66-49C2-B709-F51B4213C588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509385E0-6B66-49C2-B709-F51B4213C588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509385E0-6B66-49C2-B709-F51B4213C588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DCB55CA-1352-456D-B96F-DF1E120F630A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DCB55CA-1352-456D-B96F-DF1E120F630A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DCB55CA-1352-456D-B96F-DF1E120F630A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DCB55CA-1352-456D-B96F-DF1E120F630A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
