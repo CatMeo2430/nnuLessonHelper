@@ -6,6 +6,15 @@
         <LangVersion>14</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <PublishSingleFile>true</PublishSingleFile>
+        <SelfContained>false</SelfContained>
+        <PublishAot>false</PublishAot>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\Helper\Helper.csproj">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        </ProjectReference>
+    </ItemGroup>
 </Project>
