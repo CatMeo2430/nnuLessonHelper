@@ -195,11 +195,18 @@ public sealed class Auth
     {
         if (!Config.isEncrypt)
         {
-            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DES.js");
-            var js = File.ReadAllText(path);
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var resourceName = "Helper.DES.js"; 
+            using var stream = assembly.GetManifestResourceStream(resourceName);
+            if (stream == null) 
+            {
+                throw new FileNotFoundException($"Embedded resource '{resourceName}' not found. Please check the namespace.");
+            }
+            using var reader = new StreamReader(stream);
+            var js = reader.ReadToEnd();
             var engine = new Engine().Execute(js);
             var cipher = engine.Invoke("strEnc", User.Password, "this", "password", "is").AsString();
-            User.Password =  Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(cipher));
+            User.Password = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(cipher));
         }
 
         if (!GetBatchCode())

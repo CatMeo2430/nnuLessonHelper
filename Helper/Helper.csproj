@@ -18,13 +18,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="DES.js" />
-        <Content Include="DES.js">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
-        <None Remove="config.ini" />
-        <Content Include="Config.ini">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
+        <EmbeddedResource Include="DES.js" />
+        <None Include="Config.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 </Project>
