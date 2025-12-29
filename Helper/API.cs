@@ -204,7 +204,7 @@ public sealed class API
 
             var capacity = json.SelectToken("$.data.classCapacity")?.Value<int>();
             var selected = json.SelectToken("$.data.numberOfSelected")?.Value<int>();
-            return capacity >= selected;
+            return capacity > selected;
         }
         catch (JsonException ex)
         {

@@ -65,8 +65,17 @@ public sealed class Auth
             User.TermCode = term.Replace("-", "");
             
             var time = json.SelectToken("$.dataList[0].currentTime")?.Value<string>() ?? "9999-12-31 23:59:59";
+            var start = json.SelectToken("$.dataList[0].beginTime")?.Value<string>() ?? "9999-12-31 23:59:59";
             var current = DateTime.ParseExact(time, "yyyy-MM-dd HH:mm:ss", null);
-            if (string.IsNullOrEmpty(time) | current > User.StopSupportTime) Environment.Exit(1);
+            if (string.IsNullOrEmpty(time) || current > User.StopSupportTime) Environment.Exit(1);
+
+            // var startTime = DateTime.ParseExact(start, "yyyy-MM-dd HH:mm:ss", null);
+            // while (current < startTime.AddSeconds(-3))
+            // {
+            //     current = current.AddSeconds(1);
+            //     Log.Logger.Information($"当前时间:{current}，将在{startTime}开始");
+            //     Task.Delay(1000); 
+            // }
             
             return true;
         }

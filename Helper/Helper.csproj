@@ -20,7 +20,7 @@
     <ItemGroup>
         <EmbeddedResource Include="DES.js" />
         <None Include="Config.ini">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
     </ItemGroup>
 </Project>

@@ -10,6 +10,8 @@
         <PublishSingleFile>true</PublishSingleFile>
         <SelfContained>false</SelfContained>
         <PublishAot>false</PublishAot>
+
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     </PropertyGroup>
 
     <ItemGroup>
